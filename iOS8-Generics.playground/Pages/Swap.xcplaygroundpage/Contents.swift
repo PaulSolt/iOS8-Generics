@@ -67,13 +67,18 @@ swap(&firstRunner, &secondRunner)
 
 // Make it generic
 
-func add2(_ number: Int) -> Int {
-    return number + 2
+func add2<Value: Numeric>(_ number: Value) -> Value {
+//    let two: Value = 2    // you can explicitly create a temporary
+//    return number + two   // addition operator has type requirements!
+    
+    return number + 2   // we can use type inference to make this work
 }
 
 
 add2(10)
 add2(3.14)
 add2(Float(3.14))
-
+//add2("Hello")
+var z = 34
+z.negate()
 //: [Next](@next)
