@@ -52,6 +52,10 @@ let sortedArray = array.sorted() // return an array of sorted elements (not muta
 //2.raiseTo(2) // 4
 
 // DRY: Don't Repeat Yourself
+// When we copy/paste code, or duplicate code there is a risk for errors
+// Sometimes the errors happen when we write the code, but more often
+// they happen as we maintain the code and add new features and forget to
+// update some of the places with bug fixes / feature code
 
 extension Numeric { // 2 = Int
     mutating func raiseTo(_ exponent: Int) {
@@ -75,6 +79,12 @@ print(x)
 
 let y = 4
 let z = y.raisedTo(2)
+
+let a = 4.35 as Float
+let b = Double(565.8)
+
+a.raisedTo(2)
+b.raisedTo(2)
 
 // By adding the function to the type using an extension, we make it easier
 // to find using code completition
